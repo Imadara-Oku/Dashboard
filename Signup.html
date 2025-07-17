@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./Signup.css">
+</head>
+<body>
+    <section class="form-container">
+        <div class="left">
+            <h1>Create Account</h1>
+            <p>Join our community today!</p>
+            <form id="signupForm">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username" required aria-describedby="usernameFeedback">
+                <div id="usernameFeedback" style="color: #F44336;"></div>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="you@example.com" required aria-describedby="emailFeedback">
+                <div id="emailFeedback" style="color: #F44336;"></div>
+
+                <label for="password">Password</label>
+                <div style="position: relative;">
+                    <input type="password" id="password" placeholder="Create a strong password" required aria-describedby="passwordStrengthText passwordChecklist">
+                    <button type="button" onclick="togglePassword('password')" style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; font-size: 10px; color: #007bff;">Show</button>
+                </div>
+                <div id="passwordStrengthBar" style="height: 4px; background: #ddd; border-radius: 2px; margin-bottom: 8px;">
+                    <div id="passwordStrengthFill" style="height: 100%; width: 0%; border-radius: 2px; transition: width 0.3s;"></div>
+                </div>
+                <div id="passwordStrengthText" style="margin-bottom: 8px;"></div>
+                <ul id="passwordChecklist" style="display: none; color: grey; list-style: none; padding-left: 0;">
+                    <li id="rule-length">☐ 8-20 characters</li>
+                    <li id="rule-uppercase">☐ At least one uppercase letter</li>
+                    <li id="rule-lowercase">☐ At least one lowercase letter</li>
+                    <li id="rule-number">☐ At least one number</li>
+                    <li id="rule-special">☐ At least one special character</li>
+                    <li id="rule-space">☐ No spaces</li>
+                    <li id="rule-repeat">☐ No more than 3 repeating characters</li>
+                </ul>
+                <label for="confirm-password">Confirm Password</label>
+                <div style="position: relative;">
+                    <input type="password" id="confirm-password" placeholder="Confirm your password" required aria-describedby="matchError">
+                    <button type="button" onclick="togglePassword('confirm-password')" style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; font-size: 10px; color: #007bff;">Show</button>
+                </div>
+                <div id="matchError" style="color: #F44336; display: none;">Passwords do not match</div>
+                <div class="check">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
+                </div>
+                <button type="submit" id="submitBtn">Sign Up</button>
+                <div id="errorBox" style="color: #F44336; margin-top: 8px;"></div>
+            </form>
+            <p>Already have an account? <a href="./Signin.html">Log In</a></p>
+        </div>
+        <div class="right">
+            <h1>Welcome to our Dashboard</h1>
+            <p>Discover amazing features and connect with a vibrant community</p>
+        </div>
+    </section>
+    <script src="./Signup.js"></script>
+</body>
+</html>

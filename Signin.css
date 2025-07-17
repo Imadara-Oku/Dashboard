@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgba(42, 42, 43, 0.6);
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 10px;
+}
+
+.login-container {
+    background-color: white;
+    color: black;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.login-form p {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    border: 1px solid #000;
+}
+
+.login-form input::placeholder {
+    color: black;
+}
+
+.login-form input:focus {
+    outline: none;
+    box-shadow: 0 0 3px #fff;
+}
+
+.forgot {
+    display: block;
+    text-align: right;
+    font-size: 13px;
+    color: black;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.forgot:hover {
+    text-decoration: underline;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: linear-gradient(to right, #000, #fff);
+}
+
+.login-form button:hover {
+    border: 1px solid #000;
+    opacity: 0.8;
+}
+
+.register-link {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.register-link a {
+    color: black;
+    text-decoration: underline;
+}
+
+.input-group {
+    position: relative;
+    margin-top: 10px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 12px 14px 12px;
+    font-size: 14px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    background-color: transparent;
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #555;
+    background: white;
+    padding: 0 4px;
+    font-size: 14px;
+    transition: 0.2s ease all;
+    pointer-events: none;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: -8px;
+    font-size: 12px;
+    color: #000;
+}
+
+.error-message {
+    color: #F44336;
+    font-size: 12px;
+    margin-top: 10px;
+    text-align: center;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .login-container {
+    padding: 30px 20px;
+    }
+
+    .login-form h2 {
+    font-size: 24px;
+    }
+
+    .login-form p {
+    font-size: 12px;
+    }
+
+    .login-form input[type="text"],
+    .login-form input[type="password"],
+    .login-form button {
+    font-size: 14px;
+    padding: 10px;
+    }
+
+    .forgot {
+    font-size: 12px;
+    }
+
+    .register-link {
+    font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+    padding: 20px;
+    }
+
+    .login-form h2 {
+    font-size: 22px;
+    }
+
+    .login-form p {
+    font-size: 11px;
+    }
+
+    .login-form input[type="text"],
+    .login-form input[type="password"],
+    .login-form button {
+    font-size: 13px;
+    padding: 8px;
+    }
+
+    .forgot {
+    font-size: 11px;
+    }
+
+    .register-link {
+    font-size: 12px;
+    }
+}

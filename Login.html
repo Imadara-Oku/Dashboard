@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="./Login.css" />
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="login-container">
+    <form class="login-form" onsubmit="handleLogin(event)" action="#" method="post">
+      <h2>Login to Your Dashboard</h2>
+      <p>Please enter your login and password</p>
+
+      <input size="30" type="text" id="userInput" name="userInput" placeholder="Username, Email, or Phone" oninput="validateInput()" required><br><br>
+      <input type="password" id="password" name="password" placeholder="Password" oninput="validateInput()" required /><br>
+
+      <input type="checkbox" id="rememberMe" onclick="togglePassword()"> Show Password <br><br>
+
+      <button type="submit">Login</button><br><br>
+
+      <a class="forgot text-muted" href="#">Forgot password?</a><br><br>
+      <p class="register-link">Don't have an account? <a href="./Signup.html">Register here</a></p>
+
+      <div id="errorBox" class="error-message"></div>
+    </form>
+  </div>
+
+  <script>
+    // ✅ Toggle password visibility
+    function togglePassword() {
+      const passwordInput = document.getElementById("password");
+      passwordInput.type = passwordInput.type === "password" ? "text" : "password";
+    }
+
+    // ✅ Main login handler
+    function handleLogin(event) {
+      event.preventDefault();
+
+      // ✅ All checks passed
+      window.location.href = "./Dashboard2.html";
+    }
+
+
+
+ 
+  </script>
+</body>
+</html>

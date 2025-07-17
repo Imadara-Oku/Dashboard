@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Dashboard</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Dashboard2.css">
+</head>
+<body>
+
+    <div class="dashboard-wrapper">
+
+        <aside class="sidebar">
+            <div class="sidebar__header">
+                <span class="sidebar__logo">ofsp_ce</span>
+            </div>
+            <div class="sidebar__search">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search">
+            </div>
+            <nav class="sidebar__nav">
+                <ul>
+                    <li class="sidebar__nav-item active"><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="sidebar__nav-item"><a href="#"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+                    <li class="sidebar__nav-item"><a href="#"><i class="fas fa-wallet"></i> My Expense</a></li>
+                    <li class="sidebar__nav-item"><a href="#"><i class="fas fa-chart-pie"></i> Analysis</a></li>
+                    <li class="sidebar__nav-item"><a href="#"><i class="fas fa-folder"></i> Portfolio</a></li>
+                    <li class="sidebar__nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar__logout">
+                <a href="./Signin.html"><i class="fas fa-sign-out-alt"></i> Log out</a>
+            </div>
+            <div class="sidebar__user-profile">
+                <img src="./Assets/Images/Dash 1.png" alt="User Avatar" class="user-profile__avatar">
+                <div class="user-profile__info">
+                    <div class="user-profile__name">Shekh Al Raihan</div>
+                    <div class="user-profile__status">Active Now</div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="dashboard-grid">
+                <div class="card list">
+                    <h2 class="card__title">Cards list</h2>
+
+                    <div class="card-stack">
+                        <img src="./Assets/Images/VISA.png" alt="" width="300px">
+                        <!-- <div class="card-layer back-card">
+                            <img src="Assets/Images/Cards2.png" alt="Card Back">
+                        </div>
+                        <div class="card-layer front-card">
+                            <img src="Assets/Images/Cards1.jpeg" alt="VISA Card">
+                        </div> -->
+             
+
+                    </div>
+                        <div class="number">
+                            <h1>1200 1120 9876 ****</h1>
+                            <p>08/23</p>
+                        </div>
+                        <div class="balance">
+                            <h1>$240,399</h1>
+                            <p>Total Balance</p>
+                        </div>
+
+
+
+
+
+                </div>
+                
+
+
+                <div class="card dashboard-card card--spending-limits">
+                    <h2 class="card__title">Spending limits</h2>
+                    <p class="spending-limit__label">DAILY TRANSACTION LIMIT</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 10%;"></div>
+                    </div>
+                    <p class="spending-limit__info">$199.00 spent of $2,499.00 <span class="spending-limit__percentage">10%</span></p>
+                </div>
+
+                <div class="card dashboard-card card--outcome-stats">
+                    <h2 class="card__title">Outcome Statistics</h2>
+                    <div class="outcome-stat-list">
+                        <div class="outcome-stat-item">
+                            <p class="outcome-stat-item__category">Travels</p>
+                            <div class="outcome-stat-item__progress-container">
+                                <div class="outcome-stat-item__progress-bar" style="width: 66%;"></div>
+                            </div>
+                            <p class="outcome-stat-item__value">$2,400.00 <span class="outcome-stat-item__percentage">66%</span></p>
+                        </div>
+                        <div class="outcome-stat-item">
+                            <p class="outcome-stat-item__category">Shopping</p>
+                            <div class="outcome-stat-item__progress-container">
+                                <div class="outcome-stat-item__progress-bar" style="width: 40%;"></div>
+                            </div>
+                            <p class="outcome-stat-item__value">$1,800.00 <span class="outcome-stat-item__percentage">40%</span></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="goals-transaction">
+                <div class="card dashboard-card card--goals">
+                    <h2 class="card__title">Goals
+                        <div class="card__title-actions">
+                            <i class="fas fa-plus"></i>
+                            <button class="btn btn--manage">Manage ...</button>
+                        </div>
+                    </h2>
+                    <div class="Goals">
+                        <div class="goal-item">
+                            <i class="fas fa-plane"></i>
+                            <p class="goal-item__name">Holiday trip</p>
+                            <p class="goal-item__budget-label">BUDGET</p>
+                            <p class="goal-item__amount">$655.00</p>
+                        </div>
+                        <div class="goal-item">
+                            <i class="fas fa-home"></i>
+                            <p class="goal-item__name">Renovation</p>
+                            <p class="goal-item__budget-label">BUDGET</p>
+                            <p class="goal-item__amount">$235.00</p>
+                        </div>
+                        <div class="goal-item">
+                            <i class="fab fa-xbox"></i>
+                            <p class="goal-item__name">Xbox</p>
+                            <p class="goal-item__budget-label">BUDGET</p>
+                            <p class="goal-item__amount">$854.00</p>
+                        </div>
+                        <div class="goal-item">
+                            <i class="fas fa-birthday-cake"></i>
+                            <p class="goal-item__name">Birthday</p>
+                            <p class="goal-item__budget-label">BUDGET</p>
+                            <p class="goal-item__amount">$495.00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card dashboard-card card--transactions">
+                    <h2 class="card__title">Transactions</h2>
+                    <div class="transactions-container">
+                        <div class="transaction-item">
+                            <div class="checkbox-wrapper">
+                                <input type="radio" name="transaction-select" id="john-wick-select">
+                                <label for="john-wick-select" class="profile-pic-label">
+                                    <img src="./Assets/Images/Dash 2.png" alt="John Wick" class="profile-pic">
+                                </label>
+                            </div>
+                            <div class="name">John Wick</div>
+                            <div class="card-info">
+                                <img src="Assets/Images/mastercard_logo.png" alt="Mastercard" class="card-logo">
+                                <span class="card-number">•••• 2345</span>
+                            </div>
+                            <div class="amount">$3416.45</div>
+                            <div class="status success">Success</div>
+                        </div>
+
+                        <div class="transaction-item">
+                            <div class="checkbox-wrapper">
+                                <input type="radio" name="transaction-select" id="julia-hamington-select">
+                                <label for="julia-hamington-select" class="profile-pic-label">
+                                    <img src="./Assets/Images/Dash 3.png" alt="Julia Hamington" class="profile-pic">
+                                </label>
+                            </div>
+                            <div class="name">Julia Hamington</div>
+                            <div class="card-info">
+                                <img src="Assets/Images/mastercard_logo.png" alt="Mastercard" class="card-logo">
+                                <span class="card-number">•••• 1156</span>
+                            </div>
+                            <div class="amount">$1156.45</div>
+                            <div class="status requested">Requested</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card dashboard-card card--transaction-history">
+                    <h2 class="card__title">Transaction History</h2>
+                    <table class="transaction-history-table">
+                        <thead>
+                            <tr>
+                                <th>Reciever</th>
+                                <th>Type</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Starbucks Coffee</td>
+                                <td>Food</td>
+                                <td>13 Dec 2020</td>
+                                <td>$75.67</td>
+                            </tr>
+                            <tr>
+                                <td>Nagad Bangladesh</td>
+                                <td>Shopping</td>
+                                <td>14 Dec 2020</td>
+                                <td>$250.00</td>
+                            </tr>
+                            <tr>
+                                <td>Pathao Bangladesh</td>
+                                <td>Ride Share</td>
+                                <td>07 Dec 2020</td>
+                                <td>$19.50</td>
+                            </tr>
+                            <tr>
+                                <td>Otspace LLC</td>
+                                <td>Design</td>
+                                <td>06 Dec 2020</td>
+                                <td>$350</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Basic navigation active state
+            const navItems = document.querySelectorAll('.sidebar__nav-item');
+
+            navItems.forEach(item => {
+                item.addEventListener('click', function(event) {
+                    // Prevent default link behavior for demonstration purposes
+                    event.preventDefault();
+
+                    // Remove 'active' class from all items
+                    navItems.forEach(ni => ni.classList.remove('active'));
+
+                    // Add 'active' class to the clicked item
+                    this.classList.add('active');
+
+                    // In a real application, you would load content here based on the clicked link
+                    console.log(`Mapped to: ${this.querySelector('a').textContent.trim()}`); // Corrected typo: Mapsd -> Mapped
+                });
+            });
+
+            // Example of a simple interactive element (e.g., "Manage..." button click)
+            const manageButton = document.querySelector('.btn--manage');
+            if (manageButton) {
+                manageButton.addEventListener('click', () => {
+                    alert('Manage Goals functionality would be implemented here!');
+                    // This could involve opening a modal, navigating to a new page, etc.
+                });
+            }
+
+            // Further JavaScript could include:
+            // - Data fetching from an API to dynamically populate the dashboard sections.
+            // - More complex UI interactions (e.g., filtering transactions, adding new cards/goals).
+            // - Charting library integrations (e.g., Chart.js for outcome statistics).
+            // - Responsiveness for sidebar toggling on smaller screens if hidden by default.
+        });
+    </script>
+</body>
+</html>
