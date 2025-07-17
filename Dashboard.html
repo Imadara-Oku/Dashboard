@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financial Dashboard</title>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./Dashboard.css">
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-
     <div class="dashboard-wrapper">
-
+        <button class="sidebar-toggle" aria-label="Toggle Sidebar">
+            <i class="fas fa-bars"></i>
+        </button>
         <aside class="sidebar">
             <div class="sidebar__header">
                 <span class="sidebar__logo">ofsp_ce</span>
@@ -42,36 +42,22 @@
                 </div>
             </div>
         </aside>
-
         <main class="main-content">
             <section class="dashboard-grid">
-                <div class="card-list">
+                <div class="card list">
                     <h2 class="card__title">Cards list</h2>
-
                     <div class="card-stack">
-                        <!-- <img src="./Assets/Images/VISA.png" alt="" width="300px"> -->
-                        <div class="card-layer back-card">
-                            <img src="Assets/Images/Cards2.png" alt="Card Back">
-                        </div>
-                        <div class="card-layer front-card">
-                            <img src="Assets/Images/Cards1.jpeg" alt="VISA Card">
-                        </div>
-             
-                        <div class="bal-stack">
-                       <div class="number">
+                        <img src="./Assets/Images/VISA.png" alt="VISA Card" class="card-image" width="300px">
+                    </div>
+                    <div class="number">
                         <h1>1200 1120 9876 ****</h1>
                         <p>08/23</p>
-                       </div>
-                       <div class="balance">
+                    </div>
+                    <div class="balance">
                         <h1>$240,399</h1>
                         <p>Total Balance</p>
-                       </div>
-                    </div>
                     </div>
                 </div>
-                
-
-
                 <div class="card dashboard-card card--spending-limits">
                     <h2 class="card__title">Spending limits</h2>
                     <p class="spending-limit__label">DAILY TRANSACTION LIMIT</p>
@@ -80,7 +66,6 @@
                     </div>
                     <p class="spending-limit__info">$199.00 spent of $2,499.00 <span class="spending-limit__percentage">10%</span></p>
                 </div>
-
                 <div class="card dashboard-card card--outcome-stats">
                     <h2 class="card__title">Outcome Statistics</h2>
                     <div class="outcome-stat-list">
@@ -101,7 +86,6 @@
                     </div>
                 </div>
             </section>
-
             <section class="goals-transaction">
                 <div class="card dashboard-card card--goals">
                     <h2 class="card__title">Goals
@@ -137,7 +121,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="card dashboard-card card--transactions">
                     <h2 class="card__title">Transactions</h2>
                     <div class="transactions-container">
@@ -156,7 +139,6 @@
                             <div class="amount">$3416.45</div>
                             <div class="status success">Success</div>
                         </div>
-
                         <div class="transaction-item">
                             <div class="checkbox-wrapper">
                                 <input type="radio" name="transaction-select" id="julia-hamington-select">
@@ -174,13 +156,12 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="card dashboard-card card--transaction-history">
                     <h2 class="card__title">Transaction History</h2>
                     <table class="transaction-history-table">
                         <thead>
                             <tr>
-                                <th>Reciever</th>
+                                <th>Receiver</th>
                                 <th>Type</th>
                                 <th>Date</th>
                                 <th>Amount</th>
@@ -217,42 +198,44 @@
             </section>
         </main>
     </div>
-
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Basic navigation active state
-            const navItems = document.querySelectorAll('.sidebar__nav-item');
+            // Sidebar toggle functionality
+            const sidebar = document.querySelector('.sidebar');
+            const toggleButton = document.querySelector('.sidebar-toggle');
+            toggleButton.addEventListener('click', () => {
+                sidebar.classList.toggle('sidebar--open');
+            });
 
+            // Close sidebar when clicking outside on mobile
+            document.addEventListener('click', (event) => {
+                if (window.innerWidth <= 768 && !sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
+                    sidebar.classList.remove('sidebar--open');
+                }
+            });
+
+            // Navigation active state
+            const navItems = document.querySelectorAll('.sidebar__nav-item');
             navItems.forEach(item => {
                 item.addEventListener('click', function(event) {
-                    // Prevent default link behavior for demonstration purposes
                     event.preventDefault();
-
-                    // Remove 'active' class from all items
                     navItems.forEach(ni => ni.classList.remove('active'));
-
-                    // Add 'active' class to the clicked item
                     this.classList.add('active');
-
-                    // In a real application, you would load content here based on the clicked link
-                    console.log(`Mapped to: ${this.querySelector('a').textContent.trim()}`); // Corrected typo: Mapsd -> Mapped
+                    console.log(`Mapped to: ${this.querySelector('a').textContent.trim()}`);
+                    // Close sidebar on mobile after selection
+                    if (window.innerWidth <= 768) {
+                        sidebar.classList.remove('sidebar--open');
+                    }
                 });
             });
 
-            // Example of a simple interactive element (e.g., "Manage..." button click)
+            // Manage button click
             const manageButton = document.querySelector('.btn--manage');
             if (manageButton) {
                 manageButton.addEventListener('click', () => {
                     alert('Manage Goals functionality would be implemented here!');
-                    // This could involve opening a modal, navigating to a new page, etc.
                 });
             }
-
-            // Further JavaScript could include:
-            // - Data fetching from an API to dynamically populate the dashboard sections.
-            // - More complex UI interactions (e.g., filtering transactions, adding new cards/goals).
-            // - Charting library integrations (e.g., Chart.js for outcome statistics).
-            // - Responsiveness for sidebar toggling on smaller screens if hidden by default.
         });
     </script>
 </body>
