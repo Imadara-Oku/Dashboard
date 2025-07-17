@@ -3,36 +3,52 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5; /* Light background for the overall page */
+    background-color: #f0f2f5;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure body takes full viewport height */
+    min-height: 100vh;
     color: #333;
-    font-size: 14px; /* Base font size */
-    -webkit-font-smoothing: antialiased; /* Smoother text rendering */
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden; /* Crucial: This prevents horizontal scrollbars on the body */
-
+    overflow-x: hidden;
 }
 
-/* Dashboard Wrapper - Main Layout */
+/* Dashboard Wrapper */
 .dashboard-wrapper {
     display: flex;
-    flex-grow: 1; /* Allows it to fill remaining vertical space */
+    flex-grow: 1;
     max-width: 100%;
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
 }
 
 /* Sidebar Styles */
 .sidebar {
-    width: 20%; /* Adjusted to 20% width */
+    width: 20%;
     background-color: black;
     padding: 25px 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.03);
     display: flex;
     flex-direction: column;
     border-right: 1px solid #eee;
-    box-sizing: border-box; /* Include padding in width calculation */
-    color: white; /* Changed text color to white for contrast on black background */
+    box-sizing: border-box;
+    color: white;
+    transition: transform 0.3s ease;
 }
 
 .sidebar__header {
@@ -43,14 +59,14 @@ body {
 .sidebar__logo {
     font-size: 1.6em;
     font-weight: 800;
-    color: white; /* Blue primary color */
+    color: white;
     letter-spacing: 0.5px;
 }
 
 .sidebar__search {
     display: flex;
     align-items: center;
-    background-color: grey; /* Slightly darker background for search */
+    background-color: grey;
     border-radius: 8px;
     padding: 10px 15px;
     margin-bottom: 30px;
@@ -69,9 +85,10 @@ body {
     outline: none;
     flex-grow: 1;
     font-size: 1em;
-    color: white; /* Changed input text color to white */
-    padding: 0; /* Remove default input padding */
+    color: white;
+    padding: 0;
 }
+
 .sidebar__search input::placeholder {
     color: #a0a0a0;
 }
@@ -83,7 +100,7 @@ body {
 }
 
 .sidebar__nav-item {
-    margin-bottom: 10px; /* Reduced space between items */
+    margin-bottom: 10px;
 }
 
 .sidebar__nav-item a {
@@ -91,35 +108,35 @@ body {
     align-items: center;
     padding: 12px 15px;
     text-decoration: none;
-    color: white; /* Changed link color to white */
+    color: white;
     font-weight: 500;
     border-radius: 8px;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .sidebar__nav-item a i {
-    margin-right: 15px; /* More space for icon */
+    margin-right: 15px;
     font-size: 1.1em;
-    color: #888; /* Default icon color */
+    color: #888;
 }
 
 .sidebar__nav-item.active a {
-    background-color: grey; /* Light blue background for active */
-    color: #4a90e2; /* Blue text for active */
+    background-color: grey;
+    color: #4a90e2;
     font-weight: 600;
 }
 
 .sidebar__nav-item.active a i {
-    color: #4a90e2; /* Blue icon for active */
+    color: #4a90e2;
 }
 
 .sidebar__nav-item a:hover {
-    background-color: #444; /* Darker grey on hover for sidebar items */
+    background-color: #444;
     color: white;
 }
 
 .sidebar__logout {
-    margin-top: auto; /* Pushes log out to the bottom */
+    margin-top: auto;
     margin-bottom: 20px;
 }
 
@@ -128,7 +145,7 @@ body {
     align-items: center;
     padding: 12px 15px;
     text-decoration: none;
-    color: #e74c3c; /* Red for logout */
+    color: #e74c3c;
     font-weight: 500;
     border-radius: 8px;
     transition: background-color 0.2s ease;
@@ -140,26 +157,26 @@ body {
 }
 
 .sidebar__logout a:hover {
-    background-color: #fbe6e6; /* Light red on hover */
+    background-color: #fbe6e6;
 }
 
 .sidebar__user-profile {
     display: flex;
     align-items: center;
     padding: 15px;
-    background-color: black; /* Slightly off-white background */
-    border-radius: 12px; /* More rounded corners */
+    background-color: black;
+    border-radius: 12px;
     border: 1px solid #eee;
-    box-shadow: inset 0 0 5px rgba(0,0,0,0.02); /* Subtle inner shadow */
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.02);
 }
 
 .user-profile__avatar {
-    width: 45px; /* Slightly larger avatar */
+    width: 45px;
     height: 45px;
     border-radius: 50%;
     object-fit: cover;
     margin-right: 15px;
-    border: 3px solid #4a90e2; /* Prominent blue border */
+    border: 3px solid #4a90e2;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -170,47 +187,42 @@ body {
 
 .user-profile__name {
     font-weight: 600;
-    color: white; /* Changed text color to white */
+    color: white;
     font-size: 1.1em;
     margin-bottom: 3px;
 }
 
 .user-profile__status {
     font-size: 0.85em;
-    color: #a0a0a0; /* Adjusted status color for better contrast */
+    color: #a0a0a0;
 }
-
-
-
-
-
 
 /* Main Content Area */
 .main-content {
     flex-grow: 1;
-    padding: 30px; /* Padding around the content grid */
+    padding: 20px;
     display: flex;
-    gap: 30px; /* Space between the two main sections/columns */
+    flex-direction: column;
+    gap: 20px;
     box-sizing: border-box;
-    overflow-y: auto; /* Enable scrolling if content overflows vertically */
+    overflow-y: auto;
 }
 
-/* Grid for Cards - First Column */
+/* Dashboard Grid */
 .dashboard-grid {
     display: flex;
     flex-direction: column;
-    gap: 25px; /* Space between cards in this column */
-    flex: 1; /* Allows it to grow and shrink, taking up available space */
-    min-width: 280px; /* Provide a reasonable minimum width for content in this column */
-
+    gap: 20px;
+    flex: 1;
+    min-width: 0;
 }
 
-
+/* Cards */
 .card {
     background-color: #fff;
     border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06); 
-    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    padding: 20px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -220,40 +232,40 @@ body {
     font-size: 1.35em;
     font-weight: 700;
     margin-top: 0;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     color: #333;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #f0f0f0;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 
-/* Cards List (VISA Card) */
+/* Cards List */
 .card.list {
-    align-items: center; 
+    align-items: center;
     justify-content: center;
     text-align: center;
     background: linear-gradient(135deg, #f7f9fc 0%, #eef1f5 100%);
     border: 1px solid #e0e0e0;
-    padding-top: 50px; /* Adjust for the image positioning */
-    min-height: 250px;
-    overflow: hidden; /* Ensure nothing spills out */
+    padding-top: 40px;
+    min-height: 200px;
+    overflow: hidden;
 }
 
-.card.list .card-image { /* Use the specific class added to the img tag */
-    width: 90%; /* Make the VISA image responsive within its container */
-    max-width: 280px; /* Max width for the card image */
+.card.list .card-image {
+    width: 80%;
+    max-width: 250px;
     height: auto;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* More prominent shadow for card image */
-    margin-bottom: 30px;
-    transform: translateY(-20px); /* Lift the card image slightly */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+    transform: translateY(-15px);
 }
 
 .card.list .number h1 {
-    font-family: 'Inter', monospace; /* Monospace for card numbers */
-    font-size: 1.6em;
+    font-family: 'Inter', monospace;
+    font-size: 1.4em;
     font-weight: 700;
     margin-bottom: 5px;
     color: #333;
@@ -261,43 +273,41 @@ body {
 }
 
 .card.list .number p {
-    font-size: 0.9em;
+    font-size: 0.85em;
     color: #777;
     margin-top: 0;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .card.list .balance {
-    margin-top: 20px;
+    margin-top: 15px;
     border-top: 1px solid #eee;
-    padding-top: 20px;
+    padding-top: 15px;
     width: 100%;
 }
 
 .card.list .balance h1 {
-    font-size: 2.2em;
+    font-size: 1.8em;
     font-weight: 800;
-    /* color: #4a90e2; */
     margin-bottom: 5px;
 }
 
 .card.list .balance p {
-    font-size: 0.9em;
+    font-size: 0.85em;
     color: #777;
     margin-top: 0;
 }
 
-
 /* Spending Limits Card */
 .card--spending-limits {
-    flex-grow: 1; /* Allows it to expand */
-    padding-top: 30px; /* Adjust padding slightly */
+    flex-grow: 1;
+    padding-top: 20px;
 }
 
 .spending-limit__label {
-    font-size: 0.8em;
+    font-size: 0.75em;
     color: #888;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -307,20 +317,20 @@ body {
     width: 100%;
     background-color: #e0e0e0;
     border-radius: 10px;
-    height: 10px;
+    height: 8px;
     overflow: hidden;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .progress-bar {
     height: 100%;
-    background-color: #4a90e2; /* Primary blue for progress */
+    background-color: #4a90e2;
     border-radius: 10px;
     transition: width 0.5s ease-in-out;
 }
 
 .spending-limit__info {
-    font-size: 0.95em;
+    font-size: 0.9em;
     color: #555;
     display: flex;
     justify-content: space-between;
@@ -336,13 +346,13 @@ body {
 /* Outcome Statistics Card */
 .card--outcome-stats {
     flex-grow: 1;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 .outcome-stat-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
 .outcome-stat-item {
@@ -355,35 +365,34 @@ body {
     font-weight: 600;
     color: #333;
     margin-bottom: 5px;
-    font-size: 1em;
+    font-size: 0.95em;
 }
 
 .outcome-stat-item__progress-container {
     width: 100%;
     background-color: #e0e0e0;
-    border-radius: 8px; /* Slightly smaller radius */
-    height: 8px;
+    border-radius: 8px;
+    height: 6px;
     overflow: hidden;
 }
 
 .outcome-stat-item__progress-bar {
     height: 100%;
-    background-color: #2ecc71; /* Default green for progress */
+    background-color: #2ecc71;
     border-radius: 8px;
     transition: width 0.5s ease-in-out;
 }
 
-/* Specific colors for outcome progress bars */
 .outcome-stat-item:nth-child(1) .outcome-stat-item__progress-bar {
-    background-color: #f39c12; /* Orange for Travels */
+    background-color: #f39c12;
 }
+
 .outcome-stat-item:nth-child(2) .outcome-stat-item__progress-bar {
-    background-color: #8e44ad; /* Purple for Shopping */
+    background-color: #8e44ad;
 }
-/* You can add more for other categories if needed */
 
 .outcome-stat-item__value {
-    font-size: 0.95em;
+    font-size: 0.9em;
     color: #555;
     display: flex;
     justify-content: space-between;
@@ -397,52 +406,42 @@ body {
     color: #4a90e2;
 }
 
-
-
-
-
-
-
-/* Goals and Transactions Section - Second Column */
+/* Goals and Transactions Section */
 .goals-transaction {
     display: flex;
     flex-direction: column;
-    gap: 25px; /* Space between cards in this column */
-    min-width: 430px; /* CRITICAL: This ensures enough space for the 4 goals + gaps (4*100px + 3*18px) */
-    flex-shrink: 0; /* Prevents this column from shrinking below its min-width */
-    flex-grow: 0; /* Prevents this column from growing unnecessarily large */
+    gap: 20px;
+    min-width: 0;
+    flex-grow: 1;
 }
-
-
 
 /* Goals Card */
 .card--goals {
     flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 .card__title-actions {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
 }
 
 .card__title-actions .fas.fa-plus {
     background-color: #4a90e2;
     color: #fff;
     border-radius: 50%;
-    width: 28px; /* Larger icon circle */
-    height: 28px;
+    width: 24px;
+    height: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.8em;
+    font-size: 0.75em;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(74, 144, 226, 0.3); /* Shadow for plus icon */
+    box-shadow: 0 2px 5px rgba(74, 144, 226, 0.3);
     transition: transform 0.2s ease;
 }
+
 .card__title-actions .fas.fa-plus:hover {
     transform: scale(1.1);
 }
@@ -450,10 +449,10 @@ body {
 .btn--manage {
     background: none;
     border: 1px solid #ccc;
-    padding: 8px 18px; /* More padding */
-    border-radius: 25px; /* More rounded */
+    padding: 6px 15px;
+    border-radius: 20px;
     cursor: pointer;
-    font-size: 0.9em;
+    font-size: 0.85em;
     color: #555;
     font-weight: 500;
     transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
@@ -465,31 +464,25 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* MODIFIED CSS FOR GOALS CONTAINER */
 .Goals {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap; /* Ensures items stay in a single row */
-    gap: 18px;
-    overflow-x: hidden; /* Hides horizontal scrollbar within this container */
-    padding-bottom: 0; 
-    justify-content: space-between; /* Spreads items evenly across the available width */
-    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-bottom: 0;
+    justify-content: flex-start;
 }
 
-/* Hide scrollbar for Webkit browsers (Chrome, Safari) - good practice */
 .Goals::-webkit-scrollbar {
     display: none;
 }
 
-
 .goal-item {
-    flex-shrink: 0; /* CRITICAL: Prevents items from shrinking */
-    width: 90px; /* CHANGED: Reduced from 130px to 100px */
+    flex: 1 1 80px;
+    min-width: 80px;
     background-color: #f9f9fa;
     border: 1px solid #eee;
     border-radius: 12px;
-    padding: 20px; 
+    padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -503,55 +496,55 @@ body {
 }
 
 .goal-item i {
-    font-size: 2em; /* Larger icons */
+    font-size: 1.8em;
     color: #4a90e2;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
-.goal-item:nth-child(2) i { color: #27c93f; } /* Renovation - green */
-.goal-item:nth-child(3) i { color: #6c5ce7; } /* Xbox - purple */
-.goal-item:nth-child(4) i { color: #fdcb6e; } /* Birthday - orange */
 
+.goal-item:nth-child(2) i { color: #27c93f; }
+.goal-item:nth-child(3) i { color: #6c5ce7; }
+.goal-item:nth-child(4) i { color: #fdcb6e; }
 
 .goal-item__name {
     font-weight: 600;
     color: #333;
-    margin-bottom: 8px;
-    font-size: 1.05em;
+    margin-bottom: 6px;
+    font-size: 0.95em;
 }
 
 .goal-item__budget-label {
-    font-size: 0.75em;
+    font-size: 0.7em;
     color: #888;
     text-transform: uppercase;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     letter-spacing: 0.5px;
 }
 
 .goal-item__amount {
-    font-size: 1.2em; /* Larger amount */
+    font-size: 1.1em;
     font-weight: 700;
     color: #2c3e50;
 }
+
 /* Transactions Card */
 .card--transactions {
     flex-grow: 1;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 .transactions-container {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
 }
-
-/* No direct h2 in this container; it's handled by card__title */
 
 .transaction-item {
     display: flex;
     align-items: center;
-    padding: 12px 0;
-    border-bottom: 1px solid #f0f0f0; /* Lighter border */
-    font-size: 0.95em;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.9em;
+    flex-wrap: wrap;
 }
 
 .transaction-item:last-child {
@@ -560,7 +553,7 @@ body {
 
 .transaction-item .checkbox-wrapper {
     position: relative;
-    margin-right: 15px;
+    margin-right: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -574,122 +567,108 @@ body {
     width: 0;
 }
 
-/* Style the custom radio button */
 .transaction-item .profile-pic-label {
-    display: flex; /* To contain the image */
+    display: flex;
     cursor: pointer;
     position: relative;
 }
 
 .transaction-item .profile-pic {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid transparent; /* Default transparent border */
+    border: 2px solid transparent;
     transition: border-color 0.2s ease;
 }
 
-/* Visual indicator when radio is checked */
 .transaction-item input[type="radio"]:checked + .profile-pic-label .profile-pic {
-    border-color: #4a90e2; /* Blue border when selected */
+    border-color: #4a90e2;
 }
-/* Add a dot or circle for radio selection */
+
 .transaction-item input[type="radio"]:checked + .profile-pic-label::after {
     content: '';
     position: absolute;
-    top: -2px; /* Adjust as needed */
-    right: -2px; /* Adjust as needed */
-    width: 12px;
-    height: 12px;
-    background-color: #4a90e2; /* Blue dot */
+    top: -2px;
+    right: -2px;
+    width: 10px;
+    height: 10px;
+    background-color: #4a90e2;
     border-radius: 50%;
-    border: 2px solid #fff; /* White border to make it pop */
+    border: 2px solid #fff;
     box-shadow: 0 0 0 1px #4a90e2;
 }
 
-
 .transaction-item .name {
     font-weight: 600;
-    flex: 1; /* Takes available space */
+    flex: 1;
     color: #333;
+    min-width: 100px;
 }
 
 .transaction-item .card-info {
     display: flex;
     align-items: center;
-    margin-left: 15px; /* Adjust spacing */
+    margin-left: 12px;
     color: #777;
-    font-size: 0.9em;
+    font-size: 0.85em;
 }
 
 .transaction-item .card-info .card-logo {
-    height: 18px; /* Adjust size as needed */
-    margin-right: 6px;
-    width: auto; /* Maintain aspect ratio */
-}
-
-/* Placeholder for mastercard logo - in a real app, this would be an actual image, 
-    so you wouldn't need this CSS content property. This is just for demonstration if you don't have the image. */
-.transaction-item .card-info .card-logo[alt="Mastercard"] {
-    content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/2560px-MasterCard_Logo.svg.png'); /* Example Mastercard logo */
-}
-
-.transaction-item .card-number {
-    font-family: 'Inter', sans-serif; /* Ensure consistent font */
-    letter-spacing: 0.5px;
+    height: 16px;
+    margin-right: 5px;
+    width: auto;
 }
 
 .transaction-item .amount {
     font-weight: 700;
-    margin-left: 20px; 
+    margin-left: 15px;
     text-align: right;
     color: #333;
-    font-size: 1em;
+    font-size: 0.95em;
 }
 
 .transaction-item .status {
-    margin-left: 15px;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.75em; 
+    margin-left: 12px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.7em;
     font-weight: 600;
     text-align: center;
     white-space: nowrap;
 }
 
 .transaction-item .status.success {
-    background-color: #e6f7ed; 
-    color: #2ecc71; 
+    background-color: #e6f7ed;
+    color: #2ecc71;
 }
 
 .transaction-item .status.requested {
-    background-color: #fff3e0; 
-    color: #f39c12; 
+    background-color: #fff3e0;
+    color: #f39c12;
 }
-
 
 /* Transaction History Card */
 .card--transaction-history {
     flex-grow: 1;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 .transaction-history-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .transaction-history-table th,
 .transaction-history-table td {
     text-align: left;
-    padding: 12px 0;
-    border-bottom: 1px solid #f0f0f0; 
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .transaction-history-table th {
-    font-size: 0.85em; 
+    font-size: 0.8em;
     color: #888;
     text-transform: uppercase;
     font-weight: 600;
@@ -697,22 +676,19 @@ body {
 }
 
 .transaction-history-table td {
-    font-size: 0.95em;
+    font-size: 0.9em;
     color: #555;
     font-weight: 500;
 }
 
 .transaction-history-table tbody tr:last-child td {
-    border-bottom: none; 
+    border-bottom: none;
 }
 
-.transaction-history-table td:last-chIld
-{
+.transaction-history-table td:last-child {
     font-weight: 700;
     color: #333;
 }
-
-
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
