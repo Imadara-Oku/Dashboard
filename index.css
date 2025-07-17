@@ -206,12 +206,6 @@ body {
 }
 
 
-
-
-
-
-
-
 .card {
     background-color: #fff;
     border-radius: 15px;
@@ -716,4 +710,173 @@ body {
 {
     font-weight: 700;
     color: #333;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 25%;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    .dashboard-grid {
+        width: 100%;
+    }
+
+    .goals-transaction {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .card.list .card-image {
+        width: 70%;
+        max-width: 200px;
+    }
+
+    .card.list .balance h1 {
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 250px;
+        transform: translateX(-100%);
+        z-index: 999;
+    }
+
+    .sidebar--open {
+        transform: translateX(0);
+    }
+
+    .sidebar-toggle {
+        display: block;
+    }
+
+    .main-content {
+        padding: 15px;
+        margin-top: 60px;
+    }
+
+    .dashboard-grid {
+        gap: 15px;
+    }
+
+    .goals-transaction {
+        gap: 15px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card__title {
+        font-size: 1.2em;
+        margin-bottom: 15px;
+    }
+
+    .card.list {
+        padding-top: 30px;
+        min-height: 180px;
+    }
+
+    .card.list .card-image {
+        width: 60%;
+        max-width: 180px;
+    }
+
+    .card.list .number h1 {
+        font-size: 1.2em;
+    }
+
+    .card.list .balance h1 {
+        font-size: 1.4em;
+    }
+
+    .goal-item {
+        flex: 1 1 45%;
+        min-width: 120px;
+    }
+
+    .transaction-item {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .transaction-item .name {
+        flex: 1 1 100%;
+        order: -1;
+    }
+
+    .transaction-item .card-info {
+        flex: 1 1 auto;
+    }
+
+    .transaction-item .amount {
+        flex: 1 1 auto;
+    }
+
+    .transaction-item .status {
+        flex: 1 1 auto;
+    }
+
+    .transaction-history-table {
+        font-size: 0.85em;
+    }
+
+    .transaction-history-table th,
+    .transaction-history-table td {
+        padding: 8px 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .card__title {
+        font-size: 1.1em;
+    }
+
+    .card.list .card-image {
+        width: 50%;
+        max-width: 150px;
+    }
+
+    .card.list .number h1 {
+        font-size: 1em;
+    }
+
+    .card.list .balance h1 {
+        font-size: 1.2em;
+    }
+
+    .goal-item {
+        flex: 1 1 100%;
+        min-width: 100%;
+    }
+
+    .transaction-history-table th,
+    .transaction-history-table td {
+        font-size: 0.75em;
+        padding: 6px 3px;
+    }
 }
