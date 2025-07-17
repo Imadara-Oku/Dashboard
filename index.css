@@ -3,52 +3,36 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5;
+    background-color: #f0f2f5; /* Light background for the overall page */
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; /* Ensure body takes full viewport height */
     color: #333;
-    font-size: 14px;
-    -webkit-font-smoothing: antialiased;
+    font-size: 14px; /* Base font size */
+    -webkit-font-smoothing: antialiased; /* Smoother text rendering */
     -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Crucial: This prevents horizontal scrollbars on the body */
+
 }
 
-/* Dashboard Wrapper */
+/* Dashboard Wrapper - Main Layout */
 .dashboard-wrapper {
     display: flex;
-    flex-grow: 1;
+    flex-grow: 1; /* Allows it to fill remaining vertical space */
     max-width: 100%;
-}
-
-/* Sidebar Toggle Button */
-.sidebar-toggle {
-    display: none;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
-    background-color: #4a90e2;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 1.2em;
 }
 
 /* Sidebar Styles */
 .sidebar {
-    width: 20%;
+    width: 20%; /* Adjusted to 20% width */
     background-color: black;
     padding: 25px 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.03);
     display: flex;
     flex-direction: column;
     border-right: 1px solid #eee;
-    box-sizing: border-box;
-    color: white;
-    transition: transform 0.3s ease;
+    box-sizing: border-box; /* Include padding in width calculation */
+    color: white; /* Changed text color to white for contrast on black background */
 }
 
 .sidebar__header {
@@ -59,14 +43,14 @@ body {
 .sidebar__logo {
     font-size: 1.6em;
     font-weight: 800;
-    color: white;
+    color: white; /* Blue primary color */
     letter-spacing: 0.5px;
 }
 
 .sidebar__search {
     display: flex;
     align-items: center;
-    background-color: grey;
+    background-color: grey; /* Slightly darker background for search */
     border-radius: 8px;
     padding: 10px 15px;
     margin-bottom: 30px;
@@ -85,10 +69,9 @@ body {
     outline: none;
     flex-grow: 1;
     font-size: 1em;
-    color: white;
-    padding: 0;
+    color: white; /* Changed input text color to white */
+    padding: 0; /* Remove default input padding */
 }
-
 .sidebar__search input::placeholder {
     color: #a0a0a0;
 }
@@ -100,7 +83,7 @@ body {
 }
 
 .sidebar__nav-item {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Reduced space between items */
 }
 
 .sidebar__nav-item a {
@@ -108,35 +91,35 @@ body {
     align-items: center;
     padding: 12px 15px;
     text-decoration: none;
-    color: white;
+    color: white; /* Changed link color to white */
     font-weight: 500;
     border-radius: 8px;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .sidebar__nav-item a i {
-    margin-right: 15px;
+    margin-right: 15px; /* More space for icon */
     font-size: 1.1em;
-    color: #888;
+    color: #888; /* Default icon color */
 }
 
 .sidebar__nav-item.active a {
-    background-color: grey;
-    color: #4a90e2;
+    background-color: grey; /* Light blue background for active */
+    color: #4a90e2; /* Blue text for active */
     font-weight: 600;
 }
 
 .sidebar__nav-item.active a i {
-    color: #4a90e2;
+    color: #4a90e2; /* Blue icon for active */
 }
 
 .sidebar__nav-item a:hover {
-    background-color: #444;
+    background-color: #444; /* Darker grey on hover for sidebar items */
     color: white;
 }
 
 .sidebar__logout {
-    margin-top: auto;
+    margin-top: auto; /* Pushes log out to the bottom */
     margin-bottom: 20px;
 }
 
@@ -145,7 +128,7 @@ body {
     align-items: center;
     padding: 12px 15px;
     text-decoration: none;
-    color: #e74c3c;
+    color: #e74c3c; /* Red for logout */
     font-weight: 500;
     border-radius: 8px;
     transition: background-color 0.2s ease;
@@ -157,26 +140,26 @@ body {
 }
 
 .sidebar__logout a:hover {
-    background-color: #fbe6e6;
+    background-color: #fbe6e6; /* Light red on hover */
 }
 
 .sidebar__user-profile {
     display: flex;
     align-items: center;
     padding: 15px;
-    background-color: black;
-    border-radius: 12px;
+    background-color: black; /* Slightly off-white background */
+    border-radius: 12px; /* More rounded corners */
     border: 1px solid #eee;
-    box-shadow: inset 0 0 5px rgba(0,0,0,0.02);
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.02); /* Subtle inner shadow */
 }
 
 .user-profile__avatar {
-    width: 45px;
+    width: 45px; /* Slightly larger avatar */
     height: 45px;
     border-radius: 50%;
     object-fit: cover;
     margin-right: 15px;
-    border: 3px solid #4a90e2;
+    border: 3px solid #4a90e2; /* Prominent blue border */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -187,42 +170,53 @@ body {
 
 .user-profile__name {
     font-weight: 600;
-    color: white;
+    color: white; /* Changed text color to white */
     font-size: 1.1em;
     margin-bottom: 3px;
 }
 
 .user-profile__status {
     font-size: 0.85em;
-    color: #a0a0a0;
+    color: #a0a0a0; /* Adjusted status color for better contrast */
 }
+
+
+
+
+
 
 /* Main Content Area */
 .main-content {
     flex-grow: 1;
-    padding: 20px;
+    padding: 30px; /* Padding around the content grid */
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    gap: 30px; /* Space between the two main sections/columns */
     box-sizing: border-box;
-    overflow-y: auto;
+    overflow-y: auto; /* Enable scrolling if content overflows vertically */
 }
 
-/* Dashboard Grid */
+/* Grid for Cards - First Column */
 .dashboard-grid {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    flex: 1;
-    min-width: 0;
+    gap: 25px; /* Space between cards in this column */
+    flex: 1; /* Allows it to grow and shrink, taking up available space */
+    min-width: 280px; /* Provide a reasonable minimum width for content in this column */
+
 }
 
-/* Cards */
+
+
+
+
+
+
+
 .card {
     background-color: #fff;
     border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
-    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06); 
+    padding: 25px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -232,40 +226,40 @@ body {
     font-size: 1.35em;
     font-weight: 700;
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     color: #333;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #f0f0f0;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 
-/* Cards List */
+/* Cards List (VISA Card) */
 .card.list {
-    align-items: center;
+    align-items: center; 
     justify-content: center;
     text-align: center;
     background: linear-gradient(135deg, #f7f9fc 0%, #eef1f5 100%);
     border: 1px solid #e0e0e0;
-    padding-top: 40px;
-    min-height: 200px;
-    overflow: hidden;
+    padding-top: 50px; /* Adjust for the image positioning */
+    min-height: 250px;
+    overflow: hidden; /* Ensure nothing spills out */
 }
 
-.card.list .card-image {
-    width: 80%;
-    max-width: 250px;
+.card.list .card-image { /* Use the specific class added to the img tag */
+    width: 90%; /* Make the VISA image responsive within its container */
+    max-width: 280px; /* Max width for the card image */
     height: auto;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    margin-bottom: 20px;
-    transform: translateY(-15px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* More prominent shadow for card image */
+    margin-bottom: 30px;
+    transform: translateY(-20px); /* Lift the card image slightly */
 }
 
 .card.list .number h1 {
-    font-family: 'Inter', monospace;
-    font-size: 1.4em;
+    font-family: 'Inter', monospace; /* Monospace for card numbers */
+    font-size: 1.6em;
     font-weight: 700;
     margin-bottom: 5px;
     color: #333;
@@ -273,41 +267,43 @@ body {
 }
 
 .card.list .number p {
-    font-size: 0.85em;
+    font-size: 0.9em;
     color: #777;
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .card.list .balance {
-    margin-top: 15px;
+    margin-top: 20px;
     border-top: 1px solid #eee;
-    padding-top: 15px;
+    padding-top: 20px;
     width: 100%;
 }
 
 .card.list .balance h1 {
-    font-size: 1.8em;
+    font-size: 2.2em;
     font-weight: 800;
+    /* color: #4a90e2; */
     margin-bottom: 5px;
 }
 
 .card.list .balance p {
-    font-size: 0.85em;
+    font-size: 0.9em;
     color: #777;
     margin-top: 0;
 }
 
+
 /* Spending Limits Card */
 .card--spending-limits {
-    flex-grow: 1;
-    padding-top: 20px;
+    flex-grow: 1; /* Allows it to expand */
+    padding-top: 30px; /* Adjust padding slightly */
 }
 
 .spending-limit__label {
-    font-size: 0.75em;
+    font-size: 0.8em;
     color: #888;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -317,20 +313,20 @@ body {
     width: 100%;
     background-color: #e0e0e0;
     border-radius: 10px;
-    height: 8px;
+    height: 10px;
     overflow: hidden;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .progress-bar {
     height: 100%;
-    background-color: #4a90e2;
+    background-color: #4a90e2; /* Primary blue for progress */
     border-radius: 10px;
     transition: width 0.5s ease-in-out;
 }
 
 .spending-limit__info {
-    font-size: 0.9em;
+    font-size: 0.95em;
     color: #555;
     display: flex;
     justify-content: space-between;
@@ -346,13 +342,13 @@ body {
 /* Outcome Statistics Card */
 .card--outcome-stats {
     flex-grow: 1;
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 .outcome-stat-list {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
 .outcome-stat-item {
@@ -365,34 +361,35 @@ body {
     font-weight: 600;
     color: #333;
     margin-bottom: 5px;
-    font-size: 0.95em;
+    font-size: 1em;
 }
 
 .outcome-stat-item__progress-container {
     width: 100%;
     background-color: #e0e0e0;
-    border-radius: 8px;
-    height: 6px;
+    border-radius: 8px; /* Slightly smaller radius */
+    height: 8px;
     overflow: hidden;
 }
 
 .outcome-stat-item__progress-bar {
     height: 100%;
-    background-color: #2ecc71;
+    background-color: #2ecc71; /* Default green for progress */
     border-radius: 8px;
     transition: width 0.5s ease-in-out;
 }
 
+/* Specific colors for outcome progress bars */
 .outcome-stat-item:nth-child(1) .outcome-stat-item__progress-bar {
-    background-color: #f39c12;
+    background-color: #f39c12; /* Orange for Travels */
 }
-
 .outcome-stat-item:nth-child(2) .outcome-stat-item__progress-bar {
-    background-color: #8e44ad;
+    background-color: #8e44ad; /* Purple for Shopping */
 }
+/* You can add more for other categories if needed */
 
 .outcome-stat-item__value {
-    font-size: 0.9em;
+    font-size: 0.95em;
     color: #555;
     display: flex;
     justify-content: space-between;
@@ -406,42 +403,52 @@ body {
     color: #4a90e2;
 }
 
-/* Goals and Transactions Section */
+
+
+
+
+
+
+/* Goals and Transactions Section - Second Column */
 .goals-transaction {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    min-width: 0;
-    flex-grow: 1;
+    gap: 25px; /* Space between cards in this column */
+    min-width: 430px; /* CRITICAL: This ensures enough space for the 4 goals + gaps (4*100px + 3*18px) */
+    flex-shrink: 0; /* Prevents this column from shrinking below its min-width */
+    flex-grow: 0; /* Prevents this column from growing unnecessarily large */
 }
+
+
 
 /* Goals Card */
 .card--goals {
     flex-grow: 1;
-    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
 }
 
 .card__title-actions {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
 
 .card__title-actions .fas.fa-plus {
     background-color: #4a90e2;
     color: #fff;
     border-radius: 50%;
-    width: 24px;
-    height: 24px;
+    width: 28px; /* Larger icon circle */
+    height: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.75em;
+    font-size: 0.8em;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(74, 144, 226, 0.3);
+    box-shadow: 0 2px 5px rgba(74, 144, 226, 0.3); /* Shadow for plus icon */
     transition: transform 0.2s ease;
 }
-
 .card__title-actions .fas.fa-plus:hover {
     transform: scale(1.1);
 }
@@ -449,10 +456,10 @@ body {
 .btn--manage {
     background: none;
     border: 1px solid #ccc;
-    padding: 6px 15px;
-    border-radius: 20px;
+    padding: 8px 18px; /* More padding */
+    border-radius: 25px; /* More rounded */
     cursor: pointer;
-    font-size: 0.85em;
+    font-size: 0.9em;
     color: #555;
     font-weight: 500;
     transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
@@ -464,25 +471,31 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
+/* MODIFIED CSS FOR GOALS CONTAINER */
 .Goals {
     display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding-bottom: 0;
-    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap; /* Ensures items stay in a single row */
+    gap: 18px;
+    overflow-x: hidden; /* Hides horizontal scrollbar within this container */
+    padding-bottom: 0; 
+    justify-content: space-between; /* Spreads items evenly across the available width */
+    align-items: flex-start;
 }
 
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) - good practice */
 .Goals::-webkit-scrollbar {
     display: none;
 }
 
+
 .goal-item {
-    flex: 1 1 80px;
-    min-width: 80px;
+    flex-shrink: 0; /* CRITICAL: Prevents items from shrinking */
+    width: 90px; /* CHANGED: Reduced from 130px to 100px */
     background-color: #f9f9fa;
     border: 1px solid #eee;
     border-radius: 12px;
-    padding: 15px;
+    padding: 20px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -496,55 +509,55 @@ body {
 }
 
 .goal-item i {
-    font-size: 1.8em;
+    font-size: 2em; /* Larger icons */
     color: #4a90e2;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
+.goal-item:nth-child(2) i { color: #27c93f; } /* Renovation - green */
+.goal-item:nth-child(3) i { color: #6c5ce7; } /* Xbox - purple */
+.goal-item:nth-child(4) i { color: #fdcb6e; } /* Birthday - orange */
 
-.goal-item:nth-child(2) i { color: #27c93f; }
-.goal-item:nth-child(3) i { color: #6c5ce7; }
-.goal-item:nth-child(4) i { color: #fdcb6e; }
 
 .goal-item__name {
     font-weight: 600;
     color: #333;
-    margin-bottom: 6px;
-    font-size: 0.95em;
+    margin-bottom: 8px;
+    font-size: 1.05em;
 }
 
 .goal-item__budget-label {
-    font-size: 0.7em;
+    font-size: 0.75em;
     color: #888;
     text-transform: uppercase;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
     letter-spacing: 0.5px;
 }
 
 .goal-item__amount {
-    font-size: 1.1em;
+    font-size: 1.2em; /* Larger amount */
     font-weight: 700;
     color: #2c3e50;
 }
-
 /* Transactions Card */
 .card--transactions {
     flex-grow: 1;
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 .transactions-container {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 15px;
 }
+
+/* No direct h2 in this container; it's handled by card__title */
 
 .transaction-item {
     display: flex;
     align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #f0f0f0;
-    font-size: 0.9em;
-    flex-wrap: wrap;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0; /* Lighter border */
+    font-size: 0.95em;
 }
 
 .transaction-item:last-child {
@@ -553,7 +566,7 @@ body {
 
 .transaction-item .checkbox-wrapper {
     position: relative;
-    margin-right: 12px;
+    margin-right: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -567,108 +580,122 @@ body {
     width: 0;
 }
 
+/* Style the custom radio button */
 .transaction-item .profile-pic-label {
-    display: flex;
+    display: flex; /* To contain the image */
     cursor: pointer;
     position: relative;
 }
 
 .transaction-item .profile-pic {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid transparent;
+    border: 2px solid transparent; /* Default transparent border */
     transition: border-color 0.2s ease;
 }
 
+/* Visual indicator when radio is checked */
 .transaction-item input[type="radio"]:checked + .profile-pic-label .profile-pic {
-    border-color: #4a90e2;
+    border-color: #4a90e2; /* Blue border when selected */
 }
-
+/* Add a dot or circle for radio selection */
 .transaction-item input[type="radio"]:checked + .profile-pic-label::after {
     content: '';
     position: absolute;
-    top: -2px;
-    right: -2px;
-    width: 10px;
-    height: 10px;
-    background-color: #4a90e2;
+    top: -2px; /* Adjust as needed */
+    right: -2px; /* Adjust as needed */
+    width: 12px;
+    height: 12px;
+    background-color: #4a90e2; /* Blue dot */
     border-radius: 50%;
-    border: 2px solid #fff;
+    border: 2px solid #fff; /* White border to make it pop */
     box-shadow: 0 0 0 1px #4a90e2;
 }
 
+
 .transaction-item .name {
     font-weight: 600;
-    flex: 1;
+    flex: 1; /* Takes available space */
     color: #333;
-    min-width: 100px;
 }
 
 .transaction-item .card-info {
     display: flex;
     align-items: center;
-    margin-left: 12px;
+    margin-left: 15px; /* Adjust spacing */
     color: #777;
-    font-size: 0.85em;
+    font-size: 0.9em;
 }
 
 .transaction-item .card-info .card-logo {
-    height: 16px;
-    margin-right: 5px;
-    width: auto;
+    height: 18px; /* Adjust size as needed */
+    margin-right: 6px;
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Placeholder for mastercard logo - in a real app, this would be an actual image, 
+    so you wouldn't need this CSS content property. This is just for demonstration if you don't have the image. */
+.transaction-item .card-info .card-logo[alt="Mastercard"] {
+    content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/2560px-MasterCard_Logo.svg.png'); /* Example Mastercard logo */
+}
+
+.transaction-item .card-number {
+    font-family: 'Inter', sans-serif; /* Ensure consistent font */
+    letter-spacing: 0.5px;
 }
 
 .transaction-item .amount {
     font-weight: 700;
-    margin-left: 15px;
+    margin-left: 20px; 
     text-align: right;
     color: #333;
-    font-size: 0.95em;
+    font-size: 1em;
 }
 
 .transaction-item .status {
-    margin-left: 12px;
-    padding: 5px 10px;
-    border-radius: 15px;
-    font-size: 0.7em;
+    margin-left: 15px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75em; 
     font-weight: 600;
     text-align: center;
     white-space: nowrap;
 }
 
 .transaction-item .status.success {
-    background-color: #e6f7ed;
-    color: #2ecc71;
+    background-color: #e6f7ed; 
+    color: #2ecc71; 
 }
 
 .transaction-item .status.requested {
-    background-color: #fff3e0;
-    color: #f39c12;
+    background-color: #fff3e0; 
+    color: #f39c12; 
 }
+
 
 /* Transaction History Card */
 .card--transaction-history {
     flex-grow: 1;
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 .transaction-history-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .transaction-history-table th,
 .transaction-history-table td {
     text-align: left;
-    padding: 10px 0;
-    border-bottom: 1px solid #f0f0f0;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0; 
 }
 
 .transaction-history-table th {
-    font-size: 0.8em;
+    font-size: 0.85em; 
     color: #888;
     text-transform: uppercase;
     font-weight: 600;
@@ -676,183 +703,17 @@ body {
 }
 
 .transaction-history-table td {
-    font-size: 0.9em;
+    font-size: 0.95em;
     color: #555;
     font-weight: 500;
 }
 
 .transaction-history-table tbody tr:last-child td {
-    border-bottom: none;
+    border-bottom: none; 
 }
 
-.transaction-history-table td:last-child {
+.transaction-history-table td:last-chIld
+{
     font-weight: 700;
     color: #333;
-}
-
-/* Responsive Styles */
-@media (max-width: 1024px) {
-    .sidebar {
-        width: 25%;
-    }
-
-    .main-content {
-        flex-direction: column;
-    }
-
-    .dashboard-grid {
-        width: 100%;
-    }
-
-    .goals-transaction {
-        width: 100%;
-        min-width: 0;
-    }
-
-    .card.list .card-image {
-        width: 70%;
-        max-width: 200px;
-    }
-
-    .card.list .balance h1 {
-        font-size: 1.6em;
-    }
-}
-
-@media (max-width: 768px) {
-    .sidebar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 250px;
-        transform: translateX(-100%);
-        z-index: 999;
-    }
-
-    .sidebar--open {
-        transform: translateX(0);
-    }
-
-    .sidebar-toggle {
-        display: block;
-    }
-
-    .main-content {
-        padding: 15px;
-        margin-top: 60px;
-    }
-
-    .dashboard-grid {
-        gap: 15px;
-    }
-
-    .goals-transaction {
-        gap: 15px;
-    }
-
-    .card {
-        padding: 15px;
-    }
-
-    .card__title {
-        font-size: 1.2em;
-        margin-bottom: 15px;
-    }
-
-    .card.list {
-        padding-top: 30px;
-        min-height: 180px;
-    }
-
-    .card.list .card-image {
-        width: 60%;
-        max-width: 180px;
-    }
-
-    .card.list .number h1 {
-        font-size: 1.2em;
-    }
-
-    .card.list .balance h1 {
-        font-size: 1.4em;
-    }
-
-    .goal-item {
-        flex: 1 1 45%;
-        min-width: 120px;
-    }
-
-    .transaction-item {
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-
-    .transaction-item .name {
-        flex: 1 1 100%;
-        order: -1;
-    }
-
-    .transaction-item .card-info {
-        flex: 1 1 auto;
-    }
-
-    .transaction-item .amount {
-        flex: 1 1 auto;
-    }
-
-    .transaction-item .status {
-        flex: 1 1 auto;
-    }
-
-    .transaction-history-table {
-        font-size: 0.85em;
-    }
-
-    .transaction-history-table th,
-    .transaction-history-table td {
-        padding: 8px 5px;
-    }
-}
-
-@media (max-width: 480px) {
-    .sidebar {
-        width: 200px;
-    }
-
-    .main-content {
-        padding: 10px;
-    }
-
-    .card {
-        padding: 10px;
-    }
-
-    .card__title {
-        font-size: 1.1em;
-    }
-
-    .card.list .card-image {
-        width: 50%;
-        max-width: 150px;
-    }
-
-    .card.list .number h1 {
-        font-size: 1em;
-    }
-
-    .card.list .balance h1 {
-        font-size: 1.2em;
-    }
-
-    .goal-item {
-        flex: 1 1 100%;
-        min-width: 100%;
-    }
-
-    .transaction-history-table th,
-    .transaction-history-table td {
-        font-size: 0.75em;
-        padding: 6px 3px;
-    }
 }
