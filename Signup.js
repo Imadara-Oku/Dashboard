@@ -316,7 +316,7 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
             li.classList.remove('valid', 'invalid');
             li.style.color = 'grey';
         });
-        window.location.href = "dashboard2.html";
+        window.location.href = "index.html";
     } else {
         errorBox.textContent = "Please fix the errors above before signing up.";
     }

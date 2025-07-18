@@ -134,7 +134,7 @@ function handleLogin(event) {
     });
     console.log("Attempting redirect to dashboard.html");
     try {
-        window.location.href = "./dashboard2.html"; // Attempt redirect
+        window.location.href = "./index.html"; // Attempt redirect
         console.log("Redirect executed");
     } catch (e) {
         console.error("Redirect failed:", e);

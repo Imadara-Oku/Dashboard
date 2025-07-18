@@ -1,38 +1,37 @@
-/* General Body Styles */
+/* --- General Body Styles --- */
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5; /* Light background for the overall page */
+    background-color: #f0f2f5;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure body takes full viewport height */
+    min-height: 100vh;
     color: #333;
     font-size: 14px; /* Base font size */
-    -webkit-font-smoothing: antialiased; /* Smoother text rendering */
+    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden; /* Crucial: This prevents horizontal scrollbars on the body */
-
+    overflow-x: hidden; /* Set once here for the body */
 }
 
 /* Dashboard Wrapper - Main Layout */
 .dashboard-wrapper {
     display: flex;
-    flex-grow: 1; /* Allows it to fill remaining vertical space */
+    flex-grow: 1;
     max-width: 100%;
 }
 
 /* Sidebar Styles */
 .sidebar {
-    width: 20%; /* Adjusted to 20% width */
+    width: 20%;
     background-color: black;
     padding: 25px 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.03);
     display: flex;
     flex-direction: column;
     border-right: 1px solid #eee;
-    box-sizing: border-box; /* Include padding in width calculation */
-    color: white; /* Changed text color to white for contrast on black background */
+    box-sizing: border-box;
+    color: white;
 }
 
 .sidebar__header {
@@ -43,14 +42,14 @@ body {
 .sidebar__logo {
     font-size: 1.6em;
     font-weight: 800;
-    color: white; /* Blue primary color */
+    color: white;
     letter-spacing: 0.5px;
 }
 
 .sidebar__search {
     display: flex;
     align-items: center;
-    background-color: grey; /* Slightly darker background for search */
+    background-color: grey;
     border-radius: 8px;
     padding: 10px 15px;
     margin-bottom: 30px;
@@ -69,8 +68,8 @@ body {
     outline: none;
     flex-grow: 1;
     font-size: 1em;
-    color: white; /* Changed input text color to white */
-    padding: 0; /* Remove default input padding */
+    color: white;
+    padding: 0;
 }
 .sidebar__search input::placeholder {
     color: #a0a0a0;
@@ -83,7 +82,7 @@ body {
 }
 
 .sidebar__nav-item {
-    margin-bottom: 10px; /* Reduced space between items */
+    margin-bottom: 10px;
 }
 
 .sidebar__nav-item a {
@@ -91,35 +90,35 @@ body {
     align-items: center;
     padding: 12px 15px;
     text-decoration: none;
-    color: white; /* Changed link color to white */
+    color: white;
     font-weight: 500;
     border-radius: 8px;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .sidebar__nav-item a i {
-    margin-right: 15px; /* More space for icon */
+    margin-right: 15px;
     font-size: 1.1em;
-    color: #888; /* Default icon color */
+    color: #888;
 }
 
 .sidebar__nav-item.active a {
-    background-color: grey; /* Light blue background for active */
-    color: #4a90e2; /* Blue text for active */
+    background-color: grey;
+    color: #4a90e2;
     font-weight: 600;
 }
 
 .sidebar__nav-item.active a i {
-    color: #4a90e2; /* Blue icon for active */
+    color: #4a90e2;
 }
 
 .sidebar__nav-item a:hover {
-    background-color: #444; /* Darker grey on hover for sidebar items */
+    background-color: #444;
     color: white;
 }
 
 .sidebar__logout {
-    margin-top: auto; /* Pushes log out to the bottom */
+    margin-top: auto;
     margin-bottom: 20px;
 }
 
@@ -128,7 +127,7 @@ body {
     align-items: center;
     padding: 12px 15px;
     text-decoration: none;
-    color: #e74c3c; /* Red for logout */
+    color: #e74c3c;
     font-weight: 500;
     border-radius: 8px;
     transition: background-color 0.2s ease;
@@ -140,27 +139,27 @@ body {
 }
 
 .sidebar__logout a:hover {
-    background-color: #fbe6e6; /* Light red on hover */
+    background-color: #fbe6e6;
 }
 
 .sidebar__user-profile {
     display: flex;
     align-items: center;
     padding: 15px;
-    background-color: black; /* Slightly off-white background */
-    border-radius: 12px; /* More rounded corners */
+    background-color: black;
+    border-radius: 12px;
     border: 1px solid #eee;
-    box-shadow: inset 0 0 5px rgba(0,0,0,0.02); /* Subtle inner shadow */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.02);
 }
 
 .user-profile__avatar {
-    width: 45px; /* Slightly larger avatar */
+    width: 45px;
     height: 45px;
     border-radius: 50%;
     object-fit: cover;
     margin-right: 15px;
-    border: 3px solid #4a90e2; /* Prominent blue border */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 3px solid #4a90e2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .user-profile__info {
@@ -170,52 +169,39 @@ body {
 
 .user-profile__name {
     font-weight: 600;
-    color: white; /* Changed text color to white */
+    color: white;
     font-size: 1.1em;
     margin-bottom: 3px;
 }
 
 .user-profile__status {
     font-size: 0.85em;
-    color: #a0a0a0; /* Adjusted status color for better contrast */
+    color: #a0a0a0;
 }
-
-
-
-
-
 
 /* Main Content Area */
 .main-content {
     flex-grow: 1;
-    padding: 30px; /* Padding around the content grid */
+    padding: 30px;
     display: flex;
-    gap: 30px; /* Space between the two main sections/columns */
+    gap: 30px;
     box-sizing: border-box;
-    overflow-y: auto; /* Enable scrolling if content overflows vertically */
+    overflow-y: auto;
 }
 
 /* Grid for Cards - First Column */
 .dashboard-grid {
     display: flex;
     flex-direction: column;
-    gap: 25px; /* Space between cards in this column */
-    flex: 1; /* Allows it to grow and shrink, taking up available space */
-    min-width: 280px; /* Provide a reasonable minimum width for content in this column */
-
+    gap: 25px;
+    flex: 1;
+    min-width: 280px;
 }
-
-
-
-
-
-
-
 
 .card {
     background-color: #fff;
     border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06); 
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
     padding: 25px;
     position: relative;
     display: flex;
@@ -237,30 +223,30 @@ body {
 
 /* Cards List (VISA Card) */
 .card.list {
-    align-items: center; 
+    align-items: center;
     justify-content: center;
     text-align: center;
     background: linear-gradient(135deg, #f7f9fc 0%, #eef1f5 100%);
     border: 1px solid #e0e0e0;
-    padding-top: 50px; /* Adjust for the image positioning */
+    padding-top: 50px;
     min-height: 250px;
-    overflow: hidden; /* Ensure nothing spills out */
+    overflow: hidden;
 }
 
-.card.list .card-image { /* Use the specific class added to the img tag */
-    width: 90%; /* Make the VISA image responsive within its container */
-    max-width: 280px; /* Max width for the card image */
+.card.list .card-image {
+    width: 90%;
+    max-width: 280px;
     height: auto;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* More prominent shadow for card image */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     margin-bottom: 30px;
-    transform: translateY(-20px); /* Lift the card image slightly */
+    transform: translateY(-20px);
 }
 
 .card.list .number h1 {
-    font-family: 'Inter', monospace; /* Monospace for card numbers */
+    font-family: 'Inter', monospace;
     font-size: 1.6em;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 5px;
     color: #333;
     letter-spacing: 1px;
@@ -283,7 +269,7 @@ body {
 .card.list .balance h1 {
     font-size: 2.2em;
     font-weight: 800;
-    /* color: #4a90e2; */
+    color: #4a90e2; /* Assuming you want this to be blue */
     margin-bottom: 5px;
 }
 
@@ -293,11 +279,10 @@ body {
     margin-top: 0;
 }
 
-
 /* Spending Limits Card */
 .card--spending-limits {
-    flex-grow: 1; /* Allows it to expand */
-    padding-top: 30px; /* Adjust padding slightly */
+    flex-grow: 1;
+    padding-top: 30px;
 }
 
 .spending-limit__label {
@@ -320,7 +305,7 @@ body {
 
 .progress-bar {
     height: 100%;
-    background-color: #4a90e2; /* Primary blue for progress */
+    background-color: #4a90e2;
     border-radius: 10px;
     transition: width 0.5s ease-in-out;
 }
@@ -367,26 +352,25 @@ body {
 .outcome-stat-item__progress-container {
     width: 100%;
     background-color: #e0e0e0;
-    border-radius: 8px; /* Slightly smaller radius */
+    border-radius: 8px;
     height: 8px;
     overflow: hidden;
 }
 
 .outcome-stat-item__progress-bar {
     height: 100%;
-    background-color: #2ecc71; /* Default green for progress */
+    background-color: #2ecc71;
     border-radius: 8px;
     transition: width 0.5s ease-in-out;
 }
 
 /* Specific colors for outcome progress bars */
 .outcome-stat-item:nth-child(1) .outcome-stat-item__progress-bar {
-    background-color: #f39c12; /* Orange for Travels */
+    background-color: #f39c12;
 }
 .outcome-stat-item:nth-child(2) .outcome-stat-item__progress-bar {
-    background-color: #8e44ad; /* Purple for Shopping */
+    background-color: #8e44ad;
 }
-/* You can add more for other categories if needed */
 
 .outcome-stat-item__value {
     font-size: 0.95em;
@@ -403,23 +387,15 @@ body {
     color: #4a90e2;
 }
 
-
-
-
-
-
-
 /* Goals and Transactions Section - Second Column */
 .goals-transaction {
     display: flex;
     flex-direction: column;
-    gap: 25px; /* Space between cards in this column */
-    min-width: 430px; /* CRITICAL: This ensures enough space for the 4 goals + gaps (4*100px + 3*18px) */
-    flex-shrink: 0; /* Prevents this column from shrinking below its min-width */
-    flex-grow: 0; /* Prevents this column from growing unnecessarily large */
+    gap: 25px;
+    min-width: 430px;
+    flex-shrink: 0;
+    flex-grow: 0;
 }
-
-
 
 /* Goals Card */
 .card--goals {
@@ -439,14 +415,14 @@ body {
     background-color: #4a90e2;
     color: #fff;
     border-radius: 50%;
-    width: 28px; /* Larger icon circle */
+    width: 28px;
     height: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 0.8em;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(74, 144, 226, 0.3); /* Shadow for plus icon */
+    box-shadow: 0 2px 5px rgba(74, 144, 226, 0.3);
     transition: transform 0.2s ease;
 }
 .card__title-actions .fas.fa-plus:hover {
@@ -456,8 +432,8 @@ body {
 .btn--manage {
     background: none;
     border: 1px solid #ccc;
-    padding: 8px 18px; /* More padding */
-    border-radius: 25px; /* More rounded */
+    padding: 8px 18px;
+    border-radius: 25px;
     cursor: pointer;
     font-size: 0.9em;
     color: #555;
@@ -468,18 +444,18 @@ body {
 .btn--manage:hover {
     background-color: #f0f0f0;
     border-color: #a0a0a0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 /* MODIFIED CSS FOR GOALS CONTAINER */
 .Goals {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap; /* Ensures items stay in a single row */
+    flex-wrap: nowrap;
     gap: 18px;
-    overflow-x: hidden; /* Hides horizontal scrollbar within this container */
-    padding-bottom: 0; 
-    justify-content: space-between; /* Spreads items evenly across the available width */
+    overflow-x: hidden;
+    padding-bottom: 0;
+    justify-content: space-between;
     align-items: flex-start;
 }
 
@@ -488,14 +464,13 @@ body {
     display: none;
 }
 
-
 .goal-item {
-    flex-shrink: 0; /* CRITICAL: Prevents items from shrinking */
-    width: 90px; /* CHANGED: Reduced from 130px to 100px */
+    flex-shrink: 0;
+    width: 90px;
     background-color: #f9f9fa;
     border: 1px solid #eee;
     border-radius: 12px;
-    padding: 20px; 
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -509,14 +484,19 @@ body {
 }
 
 .goal-item i {
-    font-size: 2em; /* Larger icons */
+    font-size: 2em;
     color: #4a90e2;
     margin-bottom: 12px;
 }
-.goal-item:nth-child(2) i { color: #27c93f; } /* Renovation - green */
-.goal-item:nth-child(3) i { color: #6c5ce7; } /* Xbox - purple */
-.goal-item:nth-child(4) i { color: #fdcb6e; } /* Birthday - orange */
-
+.goal-item:nth-child(2) i {
+    color: #27c93f;
+}
+.goal-item:nth-child(3) i {
+    color: #6c5ce7;
+}
+.goal-item:nth-child(4) i {
+    color: #fdcb6e;
+}
 
 .goal-item__name {
     font-weight: 600;
@@ -534,7 +514,7 @@ body {
 }
 
 .goal-item__amount {
-    font-size: 1.2em; /* Larger amount */
+    font-size: 1.2em;
     font-weight: 700;
     color: #2c3e50;
 }
@@ -550,14 +530,16 @@ body {
     gap: 15px;
 }
 
-/* No direct h2 in this container; it's handled by card__title */
-
+/* MODIFIED: Transaction Item for "Straight" Layout */
 .transaction-item {
-    display: flex;
-    align-items: center;
+    display: flex; /* Make it a flex container */
+    flex-direction: row; /* KEEP IT HORIZONTAL */
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Distribute space between main groups */
     padding: 12px 0;
-    border-bottom: 1px solid #f0f0f0; /* Lighter border */
+    border-bottom: 1px solid #f0f0f0;
     font-size: 0.95em;
+    flex-wrap: nowrap; /* Prevent wrapping unless explicitly told to do so by breakpoints */
 }
 
 .transaction-item:last-child {
@@ -570,6 +552,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0; /* Prevent from shrinking too much */
 }
 
 .transaction-item input[type="radio"] {
@@ -580,9 +563,8 @@ body {
     width: 0;
 }
 
-/* Style the custom radio button */
 .transaction-item .profile-pic-label {
-    display: flex; /* To contain the image */
+    display: flex;
     cursor: pointer;
     position: relative;
 }
@@ -592,88 +574,97 @@ body {
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid transparent; /* Default transparent border */
+    border: 2px solid transparent;
     transition: border-color 0.2s ease;
+    flex-shrink: 0; /* Ensure profile picture doesn't shrink */
 }
 
-/* Visual indicator when radio is checked */
 .transaction-item input[type="radio"]:checked + .profile-pic-label .profile-pic {
-    border-color: #4a90e2; /* Blue border when selected */
+    border-color: #4a90e2;
 }
-/* Add a dot or circle for radio selection */
 .transaction-item input[type="radio"]:checked + .profile-pic-label::after {
     content: '';
     position: absolute;
-    top: -2px; /* Adjust as needed */
-    right: -2px; /* Adjust as needed */
+    top: -2px;
+    right: -2px;
     width: 12px;
     height: 12px;
-    background-color: #4a90e2; /* Blue dot */
+    background-color: #4a90e2;
     border-radius: 50%;
-    border: 2px solid #fff; /* White border to make it pop */
+    border: 2px solid #fff;
     box-shadow: 0 0 0 1px #4a90e2;
 }
 
-
 .transaction-item .name {
     font-weight: 600;
-    flex: 1; /* Takes available space */
+    flex-grow: 1; /* Allows name to take available space */
     color: #333;
+    margin-right: 15px; /* Space between name and card info */
+    min-width: 80px; /* Ensure a minimum width for the name */
+    white-space: nowrap; /* Prevent name from wrapping */
+    overflow: hidden; /* Hide overflow if text is too long */
+    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
 }
 
 .transaction-item .card-info {
     display: flex;
     align-items: center;
-    margin-left: 15px; /* Adjust spacing */
+    margin-right: 20px; /* Space from amount */
     color: #777;
     font-size: 0.9em;
+    flex-shrink: 0; /* Prevent from shrinking too much */
+    white-space: nowrap; /* Keep card info on one line */
 }
 
 .transaction-item .card-info .card-logo {
-    height: 18px; /* Adjust size as needed */
+    height: 18px;
     margin-right: 6px;
-    width: auto; /* Maintain aspect ratio */
+    width: auto;
 }
 
-/* Placeholder for mastercard logo - in a real app, this would be an actual image, 
-    so you wouldn't need this CSS content property. This is just for demonstration if you don't have the image. */
 .transaction-item .card-info .card-logo[alt="Mastercard"] {
-    content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/2560px-MasterCard_Logo.svg.png'); /* Example Mastercard logo */
+    /* For consistent appearance and better control, consider using an SVG or a direct image src in HTML */
+    /* This CSS 'content' property isn't ideal for functional images */
+    content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/2560px-MasterCard_Logo.svg.png');
 }
 
 .transaction-item .card-number {
-    font-family: 'Inter', sans-serif; /* Ensure consistent font */
+    font-family: 'Inter', sans-serif;
     letter-spacing: 0.5px;
 }
 
 .transaction-item .amount {
     font-weight: 700;
-    margin-left: 20px; 
-    text-align: right;
+    margin-left: 10px; /* Slight margin from card info */
+    flex-shrink: 0; /* Prevent amount from shrinking */
+    text-align: right; /* Ensure amount aligns to the right if space allows */
     color: #333;
     font-size: 1em;
+    min-width: 70px; /* Ensure amount always has enough space */
+    white-space: nowrap; /* Prevent amount from wrapping */
 }
 
 .transaction-item .status {
-    margin-left: 15px;
+    margin-left: 15px; /* Space from amount */
     padding: 6px 12px;
     border-radius: 20px;
-    font-size: 0.75em; 
+    font-size: 0.75em;
     font-weight: 600;
     text-align: center;
     white-space: nowrap;
+    flex-shrink: 0; /* Prevent status from shrinking */
+    min-width: 70px; /* Ensure status badge has enough room */
 }
 
 .transaction-item .status.success {
-    background-color: #e6f7ed; 
-    color: #2ecc71; 
+    background-color: #e6f7ed;
+    color: #2ecc71;
 }
 
 .transaction-item .status.requested {
-    background-color: #fff3e0; 
-    color: #f39c12; 
+    background-color: #fff3e0;
+    color: #f39c12;
 }
-
 
 /* Transaction History Card */
 .card--transaction-history {
@@ -691,11 +682,11 @@ body {
 .transaction-history-table td {
     text-align: left;
     padding: 12px 0;
-    border-bottom: 1px solid #f0f0f0; 
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .transaction-history-table th {
-    font-size: 0.85em; 
+    font-size: 0.85em;
     color: #888;
     text-transform: uppercase;
     font-weight: 600;
@@ -709,11 +700,356 @@ body {
 }
 
 .transaction-history-table tbody tr:last-child td {
-    border-bottom: none; 
+    border-bottom: none;
 }
 
-.transaction-history-table td:last-chIld
-{
+.transaction-history-table td:last-child {
     font-weight: 700;
     color: #333;
+}
+
+/* Hide hamburger by default */
+.hamburger-menu {
+    display: none;
+}
+
+/* --- Media Queries --- */
+
+/* Small Screens (up to 768px) */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        background: #000;
+        padding: 10px 12px;
+        border-radius: 8px;
+        z-index: 1000;
+        cursor: pointer;
+    }
+
+    .hamburger-menu i {
+        font-size: 20px;
+        color: white;
+    }
+
+    /* Sidebar behavior for mobile */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 250px;
+        background: black;
+        z-index: 999;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .sidebar.show {
+        transform: translateX(0);
+    }
+
+    .dashboard-wrapper {
+        flex-direction: column;
+    }
+
+    .main-content {
+        padding: 80px 20px 20px 20px; /* room for hamburger icon */
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .dashboard-grid,
+    .goals-transaction {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%; /* Make both columns take full width */
+        min-width: unset; /* Remove fixed min-width for mobile */
+        flex-shrink: 1; /* Allow shrinking */
+        flex-grow: 1; /* Allow growing */
+    }
+
+    .card {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .card__title {
+        font-size: 1.1em; /* Slightly adjusted for better readability */
+        margin-bottom: 15px;
+    }
+
+    .card.list .number h1,
+    .card.list .balance h1 {
+        font-size: 1.5em; /* Adjusted for mobile view */
+    }
+
+    /* Goals Section */
+    .Goals {
+        flex-wrap: wrap; /* Allow goals to wrap to next line */
+        gap: 15px;
+        justify-content: flex-start; /* Align items to the start */
+    }
+
+    .goal-item {
+        width: calc(50% - 7.5px); /* Two per row with gap */
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .goal-item i {
+        font-size: 1.5em; /* Adjusted icon size */
+    }
+
+    .goal-item__amount {
+        font-size: 1.1em;
+    }
+
+    /* Transaction item adjustments for 768px and below (still straight) */
+    .transaction-item {
+        font-size: 0.9em;
+        padding: 10px 0;
+    }
+
+    .transaction-item .profile-pic {
+        width: 35px;
+        height: 35px;
+    }
+
+    .transaction-item .checkbox-wrapper {
+        margin-right: 10px;
+    }
+
+    .transaction-item .name {
+        font-size: 0.95em;
+        margin-right: 10px;
+    }
+
+    .transaction-item .card-info {
+        font-size: 0.8em;
+        margin-right: 10px;
+    }
+
+    .transaction-item .card-info .card-logo {
+        height: 16px;
+    }
+
+    .transaction-item .amount {
+        font-size: 0.9em;
+        margin-left: 5px;
+    }
+
+    .transaction-item .status {
+        font-size: 0.7em;
+        padding: 5px 10px;
+        margin-left: 10px;
+    }
+
+
+    .transaction-history-table th,
+    .transaction-history-table td {
+        padding: 8px 0; /* Less padding for table cells */
+        font-size: 0.9em; /* Smaller font for table */
+    }
+}
+
+/* Smaller Screens (up to 480px) */
+@media (max-width: 480px) {
+    .main-content {
+        padding: 80px 15px 20px 15px; /* room for hamburger icon */
+        gap: 15px; /* Reduce gap between main sections */
+    }
+
+    .card {
+        padding: 15px; /* Maintain consistent card padding */
+    }
+
+    .card__title {
+        font-size: 1em; /* Smaller title */
+        margin-bottom: 12px;
+    }
+
+    .card.list .number h1 {
+        font-size: 1.3em;
+    }
+
+    .card.list .balance h1 {
+        font-size: 1.8em;
+    }
+
+    /* Goals Section - One item per row */
+    .Goals {
+        flex-direction: column; /* Stack goals vertically */
+        gap: 12px;
+        flex-wrap: nowrap; /* Prevent wrapping if column direction is used */
+    }
+
+    .goal-item {
+        width: 100%; /* Each goal takes full width */
+        padding: 15px;
+        text-align: center;
+    }
+
+    .goal-item i {
+        font-size: 1.8em;
+    }
+
+    .goal-item__name {
+        font-size: 1em;
+    }
+
+    .goal-item__amount {
+        font-size: 1.1em;
+    }
+
+    /* Transaction item adjustments for 480px and below (still straight) */
+    .transaction-item {
+        font-size: 0.85em;
+        padding: 8px 0;
+    }
+
+    .transaction-item .profile-pic {
+        width: 32px;
+        height: 32px;
+    }
+
+    .transaction-item .name {
+        font-size: 0.9em;
+        margin-right: 8px;
+    }
+
+    .transaction-item .card-info {
+        font-size: 0.75em;
+        margin-right: 8px;
+    }
+
+    .transaction-item .card-info .card-logo {
+        height: 14px;
+    }
+
+    .transaction-item .amount {
+        font-size: 0.85em;
+        margin-left: 3px;
+    }
+
+    .transaction-item .status {
+        font-size: 0.65em;
+        padding: 4px 8px;
+        margin-left: 8px;
+        min-width: 60px; /* Can reduce min-width slightly if needed */
+    }
+
+    .transaction-history-table th,
+    .transaction-history-table td {
+        padding: 8px 0; /* Less padding for table cells */
+        font-size: 0.9em; /* Smaller font for table */
+    }
+}
+
+
+/* Extra Small Screens (up to 320px) */
+@media (max-width: 320px) {
+    body {
+        font-size: 13px; /* Slightly smaller base font size for very small screens */
+    }
+
+    .main-content {
+        padding: 70px 10px 20px; /* Reduce padding further */
+        gap: 10px;
+    }
+
+    .card {
+        padding: 10px; /* Smaller card padding */
+    }
+
+    .card__title {
+        font-size: 0.95em; /* Smaller title font */
+        margin-bottom: 10px;
+    }
+
+    .card.list .number h1 {
+        font-size: 1.1em;
+    }
+
+    .card.list .balance h1 {
+        font-size: 1.5em;
+    }
+
+    /* Goals */
+    .Goals {
+        gap: 8px; /* Smaller gap between stacked goals */
+    }
+
+    .goal-item {
+        padding: 10px; /* Smaller padding for goal items */
+    }
+
+    .goal-item i {
+        font-size: 1.5em; /* Maintain icon size relative to content */
+    }
+
+    .goal-item__name {
+        font-size: 0.9em;
+    }
+
+    .goal-item__amount {
+        font-size: 1em;
+    }
+
+    /* Transaction item adjustments for 320px and below (still straight) */
+    .transaction-item {
+        font-size: 0.8em; /* Smallest overall font size */
+        padding: 6px 0; /* Minimal vertical padding */
+    }
+
+    .transaction-item .profile-pic {
+        width: 30px; /* Even smaller profile pic */
+        height: 30px;
+    }
+
+    .transaction-item .checkbox-wrapper {
+        margin-right: 8px;
+    }
+
+    .transaction-item input[type="radio"]:checked + .profile-pic-label::after {
+        width: 9px; /* Smallest radio dot */
+        height: 9px;
+    }
+
+    .transaction-item .name {
+        font-size: 0.85em; /* Name font size */
+        margin-right: 5px;
+        min-width: 50px; /* Allow shrinking more */
+    }
+
+    .transaction-item .card-info {
+        font-size: 0.7em; /* Smallest card info font */
+        margin-right: 5px;
+    }
+
+    .transaction-item .card-info .card-logo {
+        height: 12px; /* Smallest card logo */
+    }
+
+    .transaction-item .amount {
+        font-size: 0.8em; /* Smallest amount font */
+        margin-left: 2px;
+        min-width: 60px; /* Allow shrinking more */
+    }
+
+    .transaction-item .status {
+        font-size: 0.6em; /* Smallest status font */
+        padding: 3px 6px;
+        margin-left: 5px;
+        min-width: 50px; /* Allow shrinking more */
+    }
+
+    .transaction-history-table th,
+    .transaction-history-table td {
+        padding: 6px 0; /* Even less padding for table cells */
+        font-size: 0.8em; /* Very small font for table */
+    }
 }
