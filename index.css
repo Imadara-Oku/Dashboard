@@ -708,7 +708,6 @@ body {
     color: #333;
 }
 
-<<<<<<< HEAD
 /* Hide hamburger by default */
 .hamburger-menu {
     display: none;
@@ -759,25 +758,11 @@ body {
     .main-content {
         padding: 80px 20px 20px 20px; /* room for hamburger icon */
         flex-direction: column;
-=======
-
-/* Responsive Styles for Tablets and Smaller Screens */
-@media (max-width: 1024px) {
-    .sidebar {
-        width: 25%;
-        padding: 20px 15px;
-    }
-
-    .main-content {
-        flex-direction: column;
-        padding: 20px;
->>>>>>> 3f5a18753c64c881e3a3397c84b59e1fd2a2de61
         gap: 20px;
     }
 
     .dashboard-grid,
     .goals-transaction {
-<<<<<<< HEAD
         flex-direction: column;
         gap: 15px;
         width: 100%; /* Make both columns take full width */
@@ -889,27 +874,12 @@ body {
 
     .card.list .number h1 {
         font-size: 1.3em;
-=======
-        width: 100%;
-        min-width: 0;
-        flex-grow: 1;
-    }
-
-    .card.list .card-image {
-        width: 70%;
-        max-width: 200px;
-    }
-
-    .card.list .number h1 {
-        font-size: 1.4em;
->>>>>>> 3f5a18753c64c881e3a3397c84b59e1fd2a2de61
     }
 
     .card.list .balance h1 {
         font-size: 1.8em;
     }
 
-<<<<<<< HEAD
     /* Goals Section - One item per row */
     .Goals {
         flex-direction: column; /* Stack goals vertically */
@@ -921,67 +891,6 @@ body {
         width: 100%; /* Each goal takes full width */
         padding: 15px;
         text-align: center;
-=======
-    .Goals {
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        gap: 15px;
-    }
-
-    .goal-item {
-        flex: 1 1 45%;
-        min-width: 120px;
-        width: auto;
-    }
-}
-
-@media (max-width: 768px) {
-    .sidebar {
-        width: 30%;
-        padding: 15px 10px;
-    }
-
-    .main-content {
-        padding: 15px;
-    }
-
-    .dashboard-grid,
-    .goals-transaction {
-        gap: 15px;
-    }
-
-    .card {
-        padding: 15px;
-    }
-
-    .card__title {
-        font-size: 1.2em;
-        margin-bottom: 15px;
-    }
-
-    .card.list {
-        padding-top: 30px;
-        min-height: 200px;
-    }
-
-    .card.list .card-image {
-        width: 60%;
-        max-width: 180px;
-    }
-
-    .card.list .number h1 {
-        font-size: 1.2em;
-    }
-
-    .card.list .balance h1 {
-        font-size: 1.6em;
-    }
-
-    .goal-item {
-        flex: 1 1 45%;
-        min-width: 100px;
-        padding: 15px;
->>>>>>> 3f5a18753c64c881e3a3397c84b59e1fd2a2de61
     }
 
     .goal-item i {
@@ -989,7 +898,6 @@ body {
     }
 
     .goal-item__name {
-<<<<<<< HEAD
         font-size: 1em;
     }
 
@@ -1019,194 +927,23 @@ body {
     }
 
     .transaction-item .card-info .card-logo {
-=======
-        font-size: 0.95em;
-    }
-
-    .goal-item__amount {
-        font-size: 1em;
-    }
-
-    .transaction-item {
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-
-    .transaction-item .name {
-        flex: 1 1 100%;
-        order: -1;
-    }
-
-    .transaction-item .card-info,
-    .transaction-item .amount,
-    .transaction-item .status {
-        flex: 1 1 auto;
-    }
-
-    .transaction-history-table th,
-    .transaction-history-table td {
-        padding: 8px 5px;
-        font-size: 0.85em;
-    }
-}
-
-@media (max-width: 480px) {
-    .sidebar {
-        width: 40%;
-        padding: 10px 8px;
-    }
-
-    .sidebar__logo {
-        font-size: 1.4em;
-    }
-
-    .sidebar__search {
-        padding: 8px 10px;
-    }
-
-    .sidebar__nav-item a {
-        padding: 10px 12px;
-        font-size: 0.9em;
-    }
-
-    .sidebar__user-profile {
-        padding: 10px;
-    }
-
-    .user-profile__avatar {
-        width: 35px;
-        height: 35px;
-    }
-
-    .user-profile__name {
-        font-size: 1em;
-    }
-
-    .user-profile__status {
-        font-size: 0.75em;
-    }
-
-    .main-content {
-        padding: 10px;
-    }
-
-    .dashboard-grid,
-    .goals-transaction {
-        gap: 10px;
-    }
-
-    .card {
-        padding: 10px;
-    }
-
-    .card__title {
-        font-size: 1.1em;
-        margin-bottom: 10px;
-    }
-
-    .card.list {
-        padding-top: 20px;
-        min-height: 180px;
-    }
-
-    .card.list .card-image {
-        width: 50%;
-        max-width: 150px;
-        margin-bottom: 20px;
-    }
-
-    .card.list .number h1 {
-        font-size: 1em;
-    }
-
-    .card.list .balance h1 {
-        font-size: 1.4em;
-    }
-
-    .card.list .number p,
-    .card.list .balance p {
-        font-size: 0.8em;
-    }
-
-    .spending-limit__label {
-        font-size: 0.7em;
-    }
-
-    .spending-limit__info {
-        font-size: 0.85em;
-    }
-
-    .outcome-stat-item__category {
-        font-size: 0.9em;
-    }
-
-    .outcome-stat-item__value {
-        font-size: 0.85em;
-    }
-
-    .goal-item {
-        flex: 1 1 100%;
-        min-width: 100%;
-        padding: 12px;
-    }
-
-    .goal-item i {
-        font-size: 1.6em;
-        margin-bottom: 8px;
-    }
-
-    .goal-item__name {
-        font-size: 0.9em;
-    }
-
-    .goal-item__budget-label {
-        font-size: 0.65em;
-    }
-
-    .goal-item__amount {
-        font-size: 0.95em;
-    }
-
-    .transaction-item {
-        font-size: 0.85em;
-    }
-
-    .transaction-item .profile-pic {
-        width: 30px;
-        height: 30px;
-    }
-
-    .transaction-item .card-info {
-        font-size: 0.8em;
-    }
-
-    .transaction-item .card-logo {
->>>>>>> 3f5a18753c64c881e3a3397c84b59e1fd2a2de61
         height: 14px;
     }
 
     .transaction-item .amount {
-<<<<<<< HEAD
         font-size: 0.85em;
         margin-left: 3px;
-=======
-        font-size: 0.9em;
->>>>>>> 3f5a18753c64c881e3a3397c84b59e1fd2a2de61
     }
 
     .transaction-item .status {
         font-size: 0.65em;
         padding: 4px 8px;
-<<<<<<< HEAD
         margin-left: 8px;
         min-width: 60px; /* Can reduce min-width slightly if needed */
-=======
->>>>>>> 3f5a18753c64c881e3a3397c84b59e1fd2a2de61
     }
 
     .transaction-history-table th,
     .transaction-history-table td {
-<<<<<<< HEAD
         padding: 8px 0; /* Less padding for table cells */
         font-size: 0.9em; /* Smaller font for table */
     }
@@ -1316,9 +1053,3 @@ body {
         font-size: 0.8em; /* Very small font for table */
     }
 }
-=======
-        font-size: 0.75em;
-        padding: 6px 3px;
-    }
-}
->>>>>>> 3f5a18753c64c881e3a3397c84b59e1fd2a2de61
